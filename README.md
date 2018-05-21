@@ -6,7 +6,7 @@ This is a repository in progress and updates can be expected throughout Summer 2
 Below is the list of scripts and general order of usage in my own processing. 
 
   ann_hist.ncl
-  - calculates the historical (1980-2005) climatological average & linear trend in annual temperature (min & max) and 
+  - Calculates the historical (1980-2005) climatological average & linear trend in annual temperature (min & max) and 
   precipitation (total).  
   - Inputs include daily LOCA data for three variables:
      - tasmin (surface minimum air temperature)
@@ -105,7 +105,18 @@ Below is the list of scripts and general order of usage in my own processing.
      - ExtremeTemp_rcp45_2006-2099.nc
      - ExtremeTemp_rcp85_2006_2099.nc
 
-
+Time series files are named similarily to the .ncl scripts above except with *_ts.ncl appeneded to the end. An example is given for ann_hist_ts.ncl. 
+  ann_hist_ts.ncl
+  - Calculates the historical (1980-2005) time series in annual temperature (min & max) and precipitation (total).  
+  - Inputs include daily LOCA data for three variables:
+     - tasmin (surface minimum air temperature)
+     - tasmax (surface maximum air temperature)
+     - precipitation (daily total)
+  - Output includes network Common Data Format (netCDF, or .nc) files of the annual time series for each
+  variable and for each model:
+     - ann_pr_historical_1980-2005_timeseries.nc
+     - ann_tasmax_historical_1980-2005_timeseries.nc
+     - ann_tasmin_historical_1980-2005_timeseries.nc
 
 
 References: 
