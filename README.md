@@ -25,11 +25,11 @@ Below is the list of scripts and general order of usage in my own processing.
      - tasmin (surface minimum air temperature)
      - tasmax (surface maximum air temperature)
      - precipitation (daily total)
-  - Output includes network Common Data Format (netCDF, or .nc) files for climatological mean and annual trend in each
-  variable for each model:
-     - ann_pr_historical_2006-2099.nc
-     - ann_tasmax_historical_2006-2099.nc
-     - ann_tasmin_historical_2006-2099.nc
+  - Output includes network Common Data Format (netCDF, or .nc) files for annual climatological mean and trend for each 
+  scenario (rcp$ = rcp45 or rcp85) and within the file for each variable for each model:
+     - ann_pr_rcp$_2006-2099.nc
+     - ann_tasmax_rcp$_2006-2099.nc
+     - ann_tasmin_rcp$_2006-2099.nc
   
   seas_hist.ncl
   - calculates the historical (1980-2005) climatological average and linear trend in seasonal temperature (min & max) and 
@@ -64,10 +64,10 @@ Below is the list of scripts and general order of usage in my own processing.
      - tasmax (surface maximum air temperature)
      - precipitation (daily total)
   - Output includes network Common Data Format (netCDF, or .nc) files for climatological mean and seasonal ($SEAS$ = MAM, JJA, 
-  SON, or DJF) trend in each variable for each model:
-     - $SEAS$_pr_historical_2006-2099.nc
-     - $SEAS$_tasmax_historical_2006-2099.nc
-     - $SEAS$_tasmin_historical_2006-2099.nc
+  SON, or DJF) trend for each scenario (rcp$ = rcp45 or rcp85) and within the file for each variable for each model:
+     - $SEAS$_pr_rcp$_2006-2099.nc
+     - $SEAS$_tasmax_rcp$_2006-2099.nc
+     - $SEAS$_tasmin_rcp$_2006-2099.nc
      
   ExtremeTemp_hist.ncl
   - calculates the historical (1980-2005) climatological average and linear trend in extreme temperature metrics:
@@ -79,16 +79,31 @@ Below is the list of scripts and general order of usage in my own processing.
     - txColdest = tasmax on coldest day of the year
     - tnColdest = tasmin on coldest night of the year
     - tnHottest = tasmin on hottest night of the year
-  
   - Inputs include daily LOCA data for two variables:
      - tasmin (surface minimum air temperature)
      - tasmax (surface maximum air temperature)
-  - Output includes a single network Common Data Format (netCDF, or .nc) files for climatological mean and seasonal trend in 
+  - Output includes a single network Common Data Format (netCDF, or .nc) file for climatological mean and seasonal trend in 
   each extreme temperature metric for each model:
      - ExtremeTemp_1980-2005.nc
      
   ExtremeTemp_future.ncl
-
+  - calculates the historical (2006-2099) climatological average for early (2010-2039), mid (2040-2069), and late (2070-2099) 
+  century in extreme temperature metrics:
+    - days90F = number of days per year when daily tasmax is greater than 90F (32.2C)
+    - days95F = number of days per year when daily tasmax is greater than 95F (35C)
+    - days32F = number of days per year when daily tasmin is less than 32F (0C)
+    - days0F = number of days per year when daily tasmin is less than 0F (-17.8C)
+    - txHottest = tasmax on the hottest day of the year
+    - txColdest = tasmax on coldest day of the year
+    - tnColdest = tasmin on coldest night of the year
+    - tnHottest = tasmin on hottest night of the year
+  - Inputs include daily LOCA data for two variables:
+     - tasmin (surface minimum air temperature)
+     - tasmax (surface maximum air temperature)
+  - Output includes network Common Data Format (netCDF, or .nc) files for climatological mean and seasonal trend in 
+  each extreme temperature metric for each model:
+     - ExtremeTemp_rcp45_2006-2099.nc
+     - ExtremeTemp_rcp85_2006_2099.nc
 
 
 
