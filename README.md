@@ -70,7 +70,23 @@ Below is the list of scripts and general order of usage in my own processing.
      - $SEAS$_tasmin_historical_2006-2099.nc
      
   ExtremeTemp_hist.ncl
+  - calculates the historical (1980-2005) climatological average and linear trend in extreme temperature metrics:
+    - days90F = number of days per year when daily tasmax is greater than 90F (32.2C)
+    - days95F = number of days per year when daily tasmax is greater than 95F (35C)
+    - days32F = number of days per year when daily tasmin is less than 32F (0C)
+    - days0F = number of days per year when daily tasmin is less than 0F (-17.8C)
+    - txHottest = tasmax on the hottest day of the year
+    - txColdest = tasmax on coldest day of the year
+    - tnColdest = tasmin on coldest night of the year
+    - tnHottest = tasmin on hottest night of the year
   
+  - Inputs include daily LOCA data for two variables:
+     - tasmin (surface minimum air temperature)
+     - tasmax (surface maximum air temperature)
+  - Output includes a single network Common Data Format (netCDF, or .nc) files for climatological mean and seasonal trend in 
+  each extreme temperature metric for each model:
+     - ExtremeTemp_1980-2005.nc
+     
   ExtremeTemp_future.ncl
 
 
