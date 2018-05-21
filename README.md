@@ -33,10 +33,13 @@ Below is the list of scripts and general order of usage in my own processing.
   
   seas_hist.ncl
   - calculates the future projected (2006-2099) climatological average seasonal temperature (min & max) and 
-    precipitation (total) for early (2010-2039), mid (2040-2069), and late (2070-2099) century.  Seasons include spring 
-    (March, April, May; MAM), summer (June, July, and August; JJA), fall (September, October, and November; SON) and winter 
-    (December, January, February; DJF). Winter years are associated with the January of a given year (i.e., Winter 2018 is 
-    December 2017, January and Feburary 2018).
+    precipitation (total) for early (2010-2039), mid (2040-2069), and late (2070-2099) century.  
+  - Seasons include: 
+    - Spring (March, April, May; MAM), 
+    - Summer (June, July, and August; JJA) 
+    - Fall (September, October, and November; SON)
+    - Winter (December, January, February; DJF). Winter years are associated with the January of a given year (i.e., Winter 
+    2018 is December 2017, January and Feburary 2018).
   - Inputs include daily LOCA data for three variables:
      - tasmin (surface minimum air temperature)
      - tasmax (surface maximum air temperature)
