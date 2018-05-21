@@ -106,6 +106,7 @@ Below is the list of scripts and general order of usage in my own processing.
      - ExtremeTemp_rcp85_2006_2099.nc
 
 Time series files are named similarily to the .ncl scripts above except with *_ts.ncl appeneded to the end. An example is given for ann_hist_ts.ncl. 
+  
   ann_hist_ts.ncl
   - Calculates the historical (1980-2005) time series in annual temperature (min & max) and precipitation (total).  
   - Inputs include daily LOCA data for three variables:
