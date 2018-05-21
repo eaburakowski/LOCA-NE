@@ -27,13 +27,13 @@ Below is the list of scripts and general order of usage in my own processing.
      - precipitation (daily total)
   - Output includes network Common Data Format (netCDF, or .nc) files for climatological mean and annual trend in each
   variable for each model:
-     - ann_pr_historical_1980-2005.nc
-     - ann_tasmax_historical_1980-2005.nc
-     - ann_tasmin_historical_1980-2005.nc
+     - ann_pr_historical_2006-2099.nc
+     - ann_tasmax_historical_2006-2099.nc
+     - ann_tasmin_historical_2006-2099.nc
   
   seas_hist.ncl
-  - calculates the future projected (2006-2099) climatological average seasonal temperature (min & max) and 
-    precipitation (total) for early (2010-2039), mid (2040-2069), and late (2070-2099) century.  
+  - calculates the historical (1980-2005) climatological average and linear trend in seasonal temperature (min & max) and 
+    precipitation (total).   
   - Seasons include: 
     - Spring (March, April, May; MAM), 
     - Summer (June, July, and August; JJA) 
@@ -51,7 +51,24 @@ Below is the list of scripts and general order of usage in my own processing.
      - $SEAS$_tasmin_historical_1980-2005.nc
      
   seas_future.ncl
-  
+  - calculates the future projected (2006-2099) climatological average seasonal temperature (min & max) and 
+    precipitation (total) for early (2010-2039), mid (2040-2069), and late (2070-2099) century.  
+  - Seasons include: 
+    - Spring (March, April, May; MAM), 
+    - Summer (June, July, and August; JJA) 
+    - Fall (September, October, and November; SON)
+    - Winter (December, January, February; DJF). Winter years are associated with the January of a given year (i.e., Winter 
+    2018 is December 2017, January and Feburary 2018).
+  - Inputs include daily LOCA data for three variables:
+     - tasmin (surface minimum air temperature)
+     - tasmax (surface maximum air temperature)
+     - precipitation (daily total)
+  - Output includes network Common Data Format (netCDF, or .nc) files for climatological mean and seasonal ($SEAS$ = MAM, JJA, 
+  SON, or DJF) trend in each variable for each model:
+     - $SEAS$_pr_historical_2006-2099.nc
+     - $SEAS$_tasmax_historical_2006-2099.nc
+     - $SEAS$_tasmin_historical_2006-2099.nc
+     
   ExtremeTemp_hist.ncl
   
   ExtremeTemp_future.ncl
