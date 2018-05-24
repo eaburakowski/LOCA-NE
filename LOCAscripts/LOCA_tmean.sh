@@ -16,7 +16,7 @@ FILES=${p}tasmax*.nc
 for infiles in ${FILES}
   do
   
-  # pull out the suffix from tasmax filename (everything after the first underscore '_')
+  # separate the base filename from file path
   bn=$(basename $infiles)
   echo $bn
 
