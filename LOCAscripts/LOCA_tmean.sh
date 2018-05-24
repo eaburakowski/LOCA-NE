@@ -12,6 +12,7 @@ p="/net/nfs/merrimack/raid/Northeast_US_Downscaling_cmip5/"
 # list all the tasmax files (will use the suffix to match with tasmin pair)
 FILES=${p}tasmax*.nc
 
+# loop over tasmax files and use tasmin pair to calculate tmean in new file
 for infiles in ${FILES}
   do
   
